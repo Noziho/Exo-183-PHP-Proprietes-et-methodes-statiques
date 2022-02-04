@@ -1,5 +1,5 @@
 <?php
-
+require 'Vod.php';
 /**
  * 1. Créez une classe VOD et définissez les propriétés suivantes :
  *    - Créez une propriété films qui sera un tableau contenant 5 noms de films au choix.
@@ -17,3 +17,10 @@
  *
  * 5. Invoquez la méthode vous permettant de récupérer le nombre total d'abonnements aux plateformes VOD de manière à afficher le nombre total d'abonnements.
  */
+ $netflix = new Vod();
+$prime = new Vod();
+
+$netflix->addAbo(1000);
+$prime->addAbo(2000);
+
+echo Vod::getAbonnes();
